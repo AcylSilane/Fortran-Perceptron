@@ -23,18 +23,18 @@
       end function heaviside
       
       function neuron(input, weights, bias) result(predicted)
-      ! A neuron function; multiplies all inputs by weights, sums them,
-      ! then adds a bias. Returns true or false based on activation
-      ! function.
-      integer, dimension(1:784), intent(in) :: input
-      real, dimension(1:784), intent(in) :: weights
-      real, intent(in) :: bias
-      real :: potential
-      integer :: predicted
-      integer :: heaviside
-      ! Multiply all inputs by weights
-      potential =  dot_product(input, weights) + bias
-      predicted = heaviside(potential)
+        ! A neuron function; multiplies all inputs by weights, sums them,
+        ! then adds a bias. Returns true or false based on activation
+        ! function.
+        integer, dimension(1:784), intent(in) :: input
+        real, dimension(1:784), intent(in) :: weights
+        real, intent(in) :: bias
+        real :: potential
+        integer :: predicted
+        integer :: heaviside
+        ! Multiply all inputs by weights
+        potential =  dot_product(input, weights) + bias
+        predicted = heaviside(potential)
       end function neuron
       
       program perceptron
