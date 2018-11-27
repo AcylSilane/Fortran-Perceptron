@@ -94,11 +94,7 @@
         end do
         
         
-        ! Open weights file and bias file
-        open(UNIT=12, FILE = "weights.csv", ACTION = "WRITE")
-        open(UNIT=13, FILE = "bias.csv", ACTION = "WRITE")
-
-        
+      
         ! Open the training set
         write(*,*) "Acquiring training data..."
         open(UNIT = 10, FILE = "training.csv", FORM = "FORMATTED", STATUS = "OLD", ACTION = "READ")
